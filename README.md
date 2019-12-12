@@ -1,2 +1,2 @@
 # aida
-Simple python project manager
+Simple tool that makes data science process fun.
