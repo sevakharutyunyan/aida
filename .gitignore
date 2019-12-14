@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# IntelIJ files
+.idea
+
+# personal use folder
+temp
