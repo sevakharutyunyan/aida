@@ -1,2 +1,2 @@
 # aida
-Simple tool that makes data science process fun.
+Automating data science as much as it needs to be.
