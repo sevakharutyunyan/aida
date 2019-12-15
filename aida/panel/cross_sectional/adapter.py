@@ -9,4 +9,3 @@ class Adapter:
 
 if __name__ == "__main__":
     adapter = Adapter(r'/home/sevak/Downloads/clinical_data.tsv')
-    print(adapter.data)
