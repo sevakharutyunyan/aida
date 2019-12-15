@@ -5,6 +5,8 @@ import pandas as pd
 
 class LocalLoader:
 
+    __slots__ = ["data", "_path", "__extension"]
+
     __EXTENSIONS = {"csv", "tsv", "xlsx"}
 
     def __init__(self, path: str):
@@ -40,13 +42,8 @@ class LocalLoader:
         if self.__extension == "tsv":
             self.data = pd.read_csv(self.path, delimiter="\t")
         if self.__extension == "xlsx":
-            self.data == pd.read_excel(self.path)
+            raise NotImplementedError
 
 
 class RemoteLoader:
     pass
-
-
-if __name__ == "__main__":
-    loader = LocalLoader(r'/home/sevak/Downloads/clinical_data.tsv')
-    print(loader.data)
