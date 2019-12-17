@@ -1,6 +1,12 @@
 """
 Main folder named after my wife. That's why it is so perfect.
 
+Objective:
+           Aida is one-stop shop for data analysis
+           Implements SoTA methods.
+           Combination of bests.
+
+
 Library contains
 
 1. Media (image, audio, video)
@@ -8,5 +14,5 @@ Library contains
 
 """
 
-__version__ = "0.0.1"
-PACKAGE_NAME = "aida"
+version = "0.0.1"
+name = "aida"
