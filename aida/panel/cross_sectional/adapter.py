@@ -1,24 +1,17 @@
-from aida.panel.cross_sectional.loader import LocalLoader
+
+import pandas as pd
+
+from aida.panel.__init__ import __Loader
 
 
 class Adapter:
 
-    __slots__ = ['n_rows', 'n_cols', '__data', 'n', 'm']
+    __Loader = __Loader
 
     def __init__(self, path):
-        self.__data = LocalLoader(path).data
+        self.__data = self.__Loader(path, local=True).data
         if self.__data.empty:
             raise ValueError('Data do not exist!')
-
-    @property
-    def m(self):
-        """Alias for number of observations"""
-        return self.__data.shape[0]
-
-    @property
-    def n(self):
-        """Alias for number of columns"""
-        return self.__data.shape[-1]
 
     @property
     def n_rows(self):
@@ -27,8 +20,3 @@ class Adapter:
     @property
     def n_cols(self):
         return self.__data.shape[-1]
-
-
-if __name__ == "__main__":
-    adapter = Adapter(r'/home/sevak/Downloads/clinical_data.tsv')
-    print(adapter.n_cols)
